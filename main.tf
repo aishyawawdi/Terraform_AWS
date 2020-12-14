@@ -1,7 +1,7 @@
 # Configure the AWS Provider
 provider "aws" {
-  access_key = "AKIAVNIUZAECNBYXOHGJ"
-  secret_key = "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"
+  access_key = "*********************"
+  secret_key = "*********************"
   region     = "eu-central-1"
 }
 
@@ -161,19 +161,7 @@ resource "aws_instance" "web-server-instance" {
     network_interface_id = aws_network_interface.web-server-nic.id
   }
 
-   # Copies the SampleApp file to Ubuntu Server
-  # provisioner "file" {
-  #   source      = "C:/Users/DELL/terraform_hw/SampleApp"
-  #   destination = "/home/ubuntu"
-    
-  #   #connect to the ubuntu server
-  #   connection {
-  #     type        = "ssh"
-  #     user        = "ubuntu"
-  #     private_key = file("/Aishy-keys.pem")
-  #     host        = aws_instance.web-server-instance.public_ip
-  #   }
-  # }
+  
   user_data = <<-EOF
                 #!/bin/bash
                 sudo apt update -y
