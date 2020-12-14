@@ -18,4 +18,5 @@ How to run:
 -use the command "terraform init" and then "terraform plan" and then "terraform apply" in your terminal.
 - terraform will print for you the server public IP, use that IP with port 5000 on your browser to view the page. (URL: http://THE-PUBLIC-IP:5000 )
   in which you change THE_PUBLIC-IP with the given IP.
+- when done; use "terraform destroy" command to delete all the resources.
 
